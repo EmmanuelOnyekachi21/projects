@@ -5,18 +5,18 @@ This repository contains various programming projects undertaken during my journ
 ## Contents
 
 1. **Rock, Paper, Scissors**
-   - Description: Implementation of the classic game "Rock, Paper, Scissors" in [insert language or framework].
+   - Description: Implementation of the classic game "Rock, Paper, Scissors" in PYTHON.
    - Features:
      - Player vs. computer mode.
      - Simple user interface.
-   - Technologies: [List of technologies used, e.g., Python, JavaScript, etc.]
+   - Technologies: Python
 
 2. **Bagels Game**
    - Description: A text-based guessing game where the player tries to guess a secret number.
    - Features:
      - Interactive command-line interface.
      - Challenging logic-based gameplay.
-   - Technologies: [List of technologies used, e.g., Python, etc.]
+   - Technologies: Python
 
 ## Usage
 
@@ -26,6 +26,3 @@ Each project folder contains its own set of instructions and documentation for r
 
 Feel free to contribute to any of the projects by submitting pull requests or opening issues. Your contributions are highly appreciated!
 
-## License
-
-This repository is licensed under the [insert license name, e.g., MIT License]. See the LICENSE file for more details.
