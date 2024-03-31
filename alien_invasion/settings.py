@@ -1,10 +1,10 @@
 class Settings:
-    """A class to tore all settings for Alien Invasion."""
+    """A class to store all settings for Alien Invasion."""
 
     def __init__(self) -> None:
         """Initialize the game's settings."""
 
         # Screen settings
-        self.screen_width = 1200
-        self.screen_height = 800
+        self.screen_width = 1366
+        self.screen_height = 768
         self.bg_color = (230, 230, 230)
