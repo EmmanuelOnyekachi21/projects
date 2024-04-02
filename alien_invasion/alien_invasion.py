@@ -3,6 +3,7 @@ import pygame
 
 from settings import Settings
 from ship import Ship
+from bullet import Bullet
 
 
 class AlienInvasion:
@@ -22,9 +23,7 @@ class AlienInvasion:
         pygame.display.set_caption("Alien Invasion")
 
         self.ship = Ship(self)
-
-        # # Set the background color.
-        # self.bg_color = (230, 230, 230)
+        self.bullets = pygame.sprite.Group()
 
     def run_game(self):
         """Start the main loop for the game"""
@@ -32,7 +31,7 @@ class AlienInvasion:
             self._check_events()
             self.ship.update()
             self._update_screen()
-            # self.clock.tick(60)
+            self.bullets.update()
 
     def _check_events(self):
         """Respond to keypresses and mouse events."""
