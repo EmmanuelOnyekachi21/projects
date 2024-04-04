@@ -19,6 +19,7 @@ class AlienInvasion:
         """Initialize the game, and create game resources
         """
         pygame.init()
+        # self.clock = pygame.time.Clock
         self.settings = Settings()
 
         self.screen = pygame.display.set_mode(
@@ -34,9 +35,20 @@ class AlienInvasion:
 
     def _create_fleet(self):
         """Create the fleet of aliens."""
-        # Make an alien.
+        # Create an alien and keep adding aliens until there's no room left.
+        # Spacing between aliens is one alien width.
         alien = Alien(self)
-        self.aliens.add(alien)
+
+        alien_width = alien.rect.width
+
+        current_x = alien_width
+
+        while current_x < (self.settings.screen_width):
+            new_alien = Alien(self)
+            new_alien.x = current_x
+            new_alien.rect.x = current_x
+            self.aliens.add(new_alien)
+            current_x += 2 * alien_width
 
     def run_game(self):
         """Start the main loop for the game"""
@@ -45,6 +57,7 @@ class AlienInvasion:
             self.ship.update()
             self._update_bullets()
             self._update_screen()
+            # self.clock.tick(60)
 
     def _update_bullets(self):
         """Update position of bullets and get rid of old bullets."""
